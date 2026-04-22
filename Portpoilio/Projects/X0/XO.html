@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="he">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="XO.css">
+    
+    <title>X-O Game</title>
+  </head>
+  <body>
+    <main class="game-page">
+      <section class="game-card">
+        <div class="top-bar">
+          <h1>איקס עיגול</h1>
+        </div>
+        <div class="status-box">
+          <h2>תור נוכחי</h2>
+          <div id ="current-player" class="current-player">X</div>
+        </div>
+        <div class="board">
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+          <button class="cell"></button>
+        </div>
+        <div class="game-info">
+          <p>לחץ על תא פנוי כדי להתחיל לשחק</p>
+        </div>
+        <div class="scoreboard">
+          <p>X wins <span id="xScore">0</span></p>
+          <p>O wins <span id="oScore">0</span></p>
+        </div>
+        <div class="actions">
+          <button id="reset-btn" class="reset-btn">איפוס משחק</button>
+        </div>
+      
+      </section>
+    </main>
+    <div id="winner-modal" style="display:none">
+      <div class="modal-content">
+  <p id="winner-message"></p>
+  <button id="close-modal">Play Again</button>
+</div>
+</div>
+    <script src="XO.css"></script>
+  </body>
+</html>

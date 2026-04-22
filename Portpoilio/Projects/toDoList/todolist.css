@@ -1,0 +1,287 @@
+/* רקע כללי */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: radial-gradient(circle at top, #1e1b4b, #020617, #0f172a);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-top: 80px;
+}
+
+/* כותרת */
+h1 {
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #22d3ee, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 15px rgba(167,139,250,0.6);
+}
+
+/* קונטיינר */
+
+.container {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 35px;
+  border-radius: 20px;
+
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 60px rgba(167,139,250,0.25);
+
+  width: 600px; /* 🔥 הגדלה */
+  max-width: 90%;
+
+  text-align: center;
+  border: 1px solid rgba(167,139,250,0.2);
+}
+
+/* אינפוט */
+input {
+  width: 70%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: #020617;
+  color: white;
+  box-shadow: inset 0 0 8px rgba(34,211,238,0.3);
+  transition: 0.3s;
+}
+
+input:focus {
+  box-shadow: inset 0 0 10px rgba(167,139,250,0.7);
+}
+
+/* קבוצת אינפוט */
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+#taskInput {
+  flex: 1;
+}
+
+button.active {
+  background: linear-gradient(135deg, #00f5ff, #7b2ff7);
+  color: white;
+  box-shadow: 0 0 10px #00f5ff;
+}
+
+/* כפתור ADD */
+#addButton {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #22d3ee, #a78bfa);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#addButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #a78bfa;
+}
+//כפתורים צבע
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white !important;
+    border-radius: 8px;
+}
+
+.edit-btn {
+    background-color:  #4dff88 !important;
+    color: black;
+    border-radius: 8px;
+
+}
+input[type="checkbox"]{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+
+
+/* רשימה */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* כל משימה */
+li {
+  margin: 10px 0;
+}
+
+/* כרטיס */
+li div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px; /* 🔥 יותר גדול */
+  border-radius: 14px;
+  background: linear-gradient(135deg, #020617, #0f172a);
+  border: 1px solid rgba(34,211,238,0.2);
+  transition: 0.3s;
+}
+li div button {
+    margin-right:  8px;
+}
+
+li div p {
+flex: 1;
+text-align: center;
+margin-left: 10px;
+}
+
+li div input [type="checkbox"]{
+    width: 16px;
+    height: 16px;
+ 
+}
+
+/* hover */
+li div:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 0 20px rgba(167,139,250,0.4);
+}
+
+/* טקסט */
+p {
+  margin: 0;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+/* משימה שבוצעה */
+.completed {
+  text-decoration: line-through;
+  color: #64748b;
+  opacity: 0.6;
+}
+
+/* כפתורים */
+button {
+  margin-left: 5px;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+/* delete */
+button:nth-child(2) {
+  background: linear-gradient(135deg, #ef4444, #7f1d1d);
+}
+
+button:nth-child(2):hover {
+  box-shadow: 0 0 10px red;
+}
+
+/* edit */
+li div button:nth-child(1) {
+    background: linear-gradient(135deg, #22c55e, #14532d);
+    color: white;
+}
+li div button:nth-child(2) {
+    background: linear-gradient(135deg, #ef4444, #7f1d1d);
+    color: white;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom:  15px;
+}
+.filters button {
+    background: #334155;
+}
+
+.filters button:hover{
+    box-shadow:  0 0 10px #0ea5e9;
+}
+
+/* =========== MEDIA =========== */
+
+@media (max-width: 768px){
+
+  /* BODY */
+  body{
+    padding-top: 40px;
+    height: auto;
+  }
+
+  /* CONTAINER */
+  .container{
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* TITLE */
+  h1{
+    font-size: 22px;
+  }
+
+  /* INPUT GROUP */
+  .input-group{
+    flex-direction: column;
+  }
+
+  input{
+    width: 100%;
+  }
+
+  #addButton{
+    width: 100%;
+    padding: 12px;
+  }
+
+  /* FILTERS */
+  .filters{
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .filters button{
+    flex: 1;
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  /* TASK ITEM */
+  li div{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 14px;
+  }
+
+  li div p{
+    text-align: center;
+    margin: 0;
+  }
+
+  /* BUTTONS INSIDE TASK */
+  li div button{
+    width: 100%;
+    margin: 0;
+  }
+
+  /* CHECKBOX */
+  input[type="checkbox"]{
+    align-self: center;
+  }
+
+}

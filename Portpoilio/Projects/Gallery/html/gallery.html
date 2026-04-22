@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MiniGram</title>
+  <link rel="stylesheet" href="../style/gallery.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+  </header>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- יצירת פוסט -->
+    <div class="create-post">
+      <h3 class="panel-title">פוסט חדש</h3>
+      <div class="upload-type">
+  <label>
+    <input type="radio" name="uploadType" value="file" checked>
+    העלאה מהמחשב
+  </label>
+
+  <label>
+    <input type="radio" name="uploadType" value="url">
+    קישור מהאינטרנט
+  </label>
+</div>
+      <input id="usernameInput" placeholder="כותרת לפוסט">
+   <!-- קישור -->
+<input type="text" id="imageInput" placeholder="הדבק קישור לתמונה">
+
+<!-- קובץ -->
+<label for="fileInput" class="action-btn upload-btn">
+  📁 בחר תמונה
+</label>
+<input type="file" id="fileInput" accept="image/*" hidden>
+
+<input type="file" id="fileInput" accept="image/*" hidden>
+    <button id="registerBtn" class="action-btn upload-btn">
+  📤 פרסם
+</button>
+    </div>
+
+    <!-- גלריה -->
+    <div id="galleryContainer"></div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© MiniGram 2026</p>
+  </footer>
+
+  <!-- JS -->
+  <script src="../scripts/gallery.js"></script>
+
+</body>
+</html>

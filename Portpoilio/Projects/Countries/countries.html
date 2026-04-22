@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="countries.css">
+  <meta charset="UTF-8">
+  <title>Countries Explorer</title>
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <h2 class="sidebar-title">🌍 Regions</h2>
+
+    <button id="favoritesBtn" class="fav-sidebar-btn">⭐ Favorites</button>
+    <button class="regionFilter">All</button>
+    <button class="regionFilter">Africa</button>
+    <button class="regionFilter">Europe</button>
+    <button class="regionFilter">Asia</button>
+    <button class="regionFilter">Americas</button>
+    <button class="regionFilter">Oceania</button>
+
+    <h2 class="sidebar-title">⚙️ Actions</h2>
+
+    <button id="sortAZ" class="sortBtn">A-Z</button>
+    <button id="sortPopAsc" class="sortBtn">Population ↑</button>
+    <button id="sortPopDesc" class="sortBtn">Population ↓</button>
+
+    <button id="resetBtn">Reset</button>
+
+    <button id="darkModeBtn">🌙 Dark Mode</button>
+
+  </div>
+
+  <!-- MAIN -->
+  <div class="main-content">
+
+    <h1>🌍 Countries Explorer</h1>
+
+    <div class="search-box">
+      <input id="searchInput" placeholder="Search country or capital..." />
+      <button id="searchButton">Search</button>
+    </div>
+
+    <div id="countriesContainer"></div>
+
+  </div>
+
+</div>
+
+<script src="countries.js"></script>
+</body>
+</html>

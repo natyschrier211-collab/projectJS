@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <link rel="stylesheet" href="../style/register.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+<div class="register-container">
+<img class="form-logo" src="../images/logo.png" alt="Logo">
+    <h1>הרשמה</h1>
+
+    <p class="register-subtitle">
+        צור חשבון חדש והתחל לשתף תמונות
+    </p>
+
+    <div class="form-group">
+        <label for="username">שם משתמש</label>
+        <input id="username" >
+    </div>
+<div class="form-group">
+    <label for="age">גיל</label>
+    <input id="age" type="number" min="10" max="120" placeholder="הכנס גיל">
+</div>
+    <div class="form-group">
+        <label for="email">אימייל</label>
+        <input id="email" type="email">
+    </div>
+
+    <div class="form-group">
+        <label for="password">סיסמה</label>
+        <input id="password" type="password">
+    </div>
+
+    <div class="form-group">
+        <label for="confirmPassword">אישור סיסמה</label>
+        <input id="confirmPassword" type="password">
+    </div>
+
+    <button id="registerBtn">הירשם</button>
+<p class="switch-page">
+    כבר יש לך חשבון?
+    <span id="goLogin">התחבר</span>
+</p>
+<script src="../scripts/register.js"></script>
+</div>
+
+</body>
+</html>

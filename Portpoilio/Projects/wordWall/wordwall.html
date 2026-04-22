@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wordwall.css">
+</head>
+<body>
+    <h1>משחק הזיכרון</h1>
+ <div class="theme-selection-area">
+    <p class="theme-label">בחר נושא למשחק:</p>
+    <div class="theme-selector">
+        <button id="btn-space" class="theme-btn active" onclick="changeTheme('space')">🚀 חלל</button>
+        <button id="btn-animals" class="theme-btn" onclick="changeTheme('animals')">🐶 חיות</button>
+        <button id="btn-food" class="theme-btn" onclick="changeTheme('food')">🍒 פירות</button>
+    </div>
+</div>
+    <div id="game-board"></div><div class="controls-wrapper">
+    <div class="stats-container">
+        <div>זמן: <span id="timer">00:00</span></div>
+        <div class="separator">|</div>
+        <div>מהלכים: <span id="moves-count">0</span></div>
+        <div class="separator">|</div>
+        <div>טעויות: <span id="mistakes-count">0</span></div>
+
+    </div> <button id="restart-btn">התחל מחדש 🔄</button>
+</div> <div id="victory-modal" class="modal-overlay">
+    <div class="modal-content">
+        <h2>🏆 ניצחון מטורף! 🏆</h2>
+        <p>כל הכבוד! הצלחת לסיים את הלוח.</p>
+        
+        <div class="final-stats">
+            <p>⏱️ זמן: <span id="final-time">00:00</span></p>
+            <p>🎯 מהלכים: <span id="final-moves">0</span></p>
+                <p>🎯 טעויות: <span id="final-mistakes">0</span></p>
+        </div>
+        
+        <button id="play-again-btn" onclick="restartGame()">שחק שוב 🚀</button>
+    </div>
+</div>
+
+<script src="wordwall.js"></script>
+</body>
+</html>

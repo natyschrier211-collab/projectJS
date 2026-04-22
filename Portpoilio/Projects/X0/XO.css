@@ -1,0 +1,204 @@
+/* ===== BASE ===== */
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: radial-gradient(circle at top, #020617, #0f172a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+
+/* ===== CARD ===== */
+
+.game-card {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.2);
+
+  width: 360px;
+  text-align: center;
+
+  border: 1px solid rgba(56,189,248,0.2);
+}
+
+
+/* ===== TITLE ===== */
+
+.top-bar h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+  text-shadow: 0 0 10px #38bdf8;
+}
+
+
+/* ===== STATUS ===== */
+
+.current-player {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #22c55e;
+  text-shadow: 0 0 10px #22c55e;
+}
+
+
+/* ===== BOARD ===== */
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 95px;
+  height: 95px;
+  font-size: 30px;
+  font-weight: bold;
+
+  border-radius: 15px;
+  border: 1px solid rgba(56,189,248,0.3);
+  cursor: pointer;
+
+  background: #020617;
+  color: white;
+
+  box-shadow:
+    inset 0 0 10px rgba(56,189,248,0.2),
+    0 0 10px rgba(0,255,255,0.1);
+
+  transition: 0.2s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+  border-color: #22c55e;
+}
+
+
+/* ===== INFO ===== */
+
+.game-info {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+
+/* ===== BUTTON ===== */
+
+.reset-btn {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  color: black;
+  font-weight: bold;
+}
+
+
+/* ===== SCORE ===== */
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.scoreboard span {
+  color: #38bdf8;
+}
+
+
+/* ===== MODAL ===== */
+
+#winner-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: #111827;
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+#winner-message {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#close-modal {
+  padding: 12px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  color: black;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 768px){
+
+  body{
+    height: auto;
+    padding: 20px;
+  }
+
+  .game-card{
+    width: 100%;
+    padding: 20px;
+  }
+
+  .top-bar h1{
+    font-size: 24px;
+  }
+
+  .current-player{
+    font-size: 26px;
+  }
+
+  .cell{
+    width: 100%;
+    height: 80px;
+    font-size: 24px;
+  }
+
+  .board{
+    gap: 10px;
+  }
+
+  .scoreboard{
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+
+  .reset-btn{
+    width: 100%;
+  }
+
+  .modal-content{
+    width: 90%;
+    padding: 20px;
+  }
+
+}
